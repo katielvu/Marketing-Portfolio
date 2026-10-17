@@ -137,15 +137,23 @@ export function Navbar() {
 
 export function Footer() {
   return (
-    <footer className="w-full py-16 mt-12 bg-[#f1f4f6]">
+    <footer className="w-full py-16 mt-12 bg-[#f1f4f6] border-t border-outline-variant/10">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto px-8 gap-8">
-        <div className="font-body text-sm leading-relaxed tracking-wide text-[#555f6f]">
-          © 2026 Katie Vu. All rights reserved.
+        <div>
+          <div className="font-headline font-bold text-sm text-[#2b3437]">
+            Katie Vu • Marketing Program Manager
+          </div>
+          <div className="font-body text-xs text-[#555f6f] mt-1">
+            San Jose, CA • katielvu@gmail.com
+          </div>
         </div>
-        <div className="flex gap-8">
-          <a href="mailto:katielvu@gmail.com" className="font-body text-sm leading-relaxed tracking-wide text-[#586064] hover:text-[#2b3437] transition-colors">Contact</a>
-          <a href="https://www.linkedin.com/in/katie-vu-b25477133/" target="_blank" rel="noopener noreferrer" className="font-body text-sm leading-relaxed tracking-wide text-[#586064] hover:text-[#2b3437] transition-colors">LinkedIn</a>
-          <a href="#" className="font-body text-sm leading-relaxed tracking-wide text-[#586064] hover:text-[#2b3437] transition-colors">Privacy Policy</a>
+        <div className="flex flex-wrap items-center gap-6">
+          <a href="mailto:katielvu@gmail.com" className="font-body text-sm leading-relaxed tracking-wide text-[#586064] hover:text-[#2b3437] transition-colors">
+            katielvu@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/katie-vu-b25477133/" target="_blank" rel="noopener noreferrer" className="font-body text-sm leading-relaxed tracking-wide text-[#586064] hover:text-[#2b3437] transition-colors">
+            LinkedIn
+          </a>
         </div>
       </div>
     </footer>

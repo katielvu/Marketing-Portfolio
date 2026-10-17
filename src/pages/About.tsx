@@ -1,4 +1,19 @@
-import { Monitor, Film, TrendingUp, Layers, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { 
+  Monitor, 
+  Film, 
+  TrendingUp, 
+  Layers, 
+  Calendar, 
+  ChevronLeft, 
+  ChevronRight,
+  GraduationCap,
+  Award,
+  Mail,
+  MapPin,
+  Briefcase,
+  Wrench,
+  CheckCircle2
+} from "lucide-react";
 import { motion } from "motion/react";
 import React, { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -35,30 +50,55 @@ export default function About() {
 
   const competencies = [
     {
-      icon: <Monitor className="w-8 h-8" />,
-      title: "Digital Ecosystem & Web Strategy",
-      description: "Led comprehensive Website Life-cycle Management, including full-scale UI/UX redesigns, structural audits, and SEO-driven content refreshes to enhance user journey and conversion."
-    },
-    {
-      icon: <Film className="w-8 h-8" />,
-      title: "Multi-Channel Content Operations",
-      description: "Orchestrated End-to-End Multimedia Programming, managing the production and launch of high-engagement video series, podcasts, and webinars to drive brand authority."
-    },
-    {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Lifecycle & Growth Marketing",
-      description: "Developed and executed Performance Marketing Funnels and automated email lifecycle sequences to maximize lead acquisition and seasonal revenue growth."
+      title: "Demand & Pipeline Generation",
+      description: "Proven track record driving qualified inbound lead growth (14% YoY) and influencing over $1.2M+ in pipeline across multi-channel campaigns including email, webinars, and landing pages."
     },
     {
       icon: <Layers className="w-8 h-8" />,
-      title: "Brand Enablement & Internal Ops",
-      description: "Standardized Cross-Functional Brand Assets, developing institutional templates (SOWs, Pitch Decks, Reports) and high-conversion case studies to streamline sales and internal workflows."
+      title: "End-to-End Lifecycle & Automation",
+      description: "Architecting and orchestrating automated customer journeys (acquisition → nurture → conversion) through behavioral segmentation, lead scoring, and 20+ growth experiments in HubSpot."
+    },
+    {
+      icon: <Film className="w-8 h-8" />,
+      title: "Campaign Operations & Execution",
+      description: "Scaled operational delivery across 200+ email deployments and 20+ automated funnels, upholding rigorous QA, A/B testing, HTML/CSS troubleshooting, and CAN-SPAM/GDPR compliance."
+    },
+    {
+      icon: <Monitor className="w-8 h-8" />,
+      title: "Cross-Functional GTM Alignment",
+      description: "Partnering closely with Sales, Customer Success, and Professional Services to synchronize targeted campaigns with service rollouts, regional priorities, and revenue goals."
     },
     {
       icon: <Calendar className="w-8 h-8" />,
-      title: "Experiential & Event Marketing",
-      description: "Directed Event Operations and Logistics for large-scale industry conferences and trade shows, overseeing vendor management and on-site brand activation."
+      title: "Events & Program Operations",
+      description: "Directing event logistics, webinars, and cross-functional marketing programs to drive audience engagement, brand presence, and pipeline velocity."
     }
+  ];
+
+  const resumeSkills = [
+    "Demand Generation",
+    "Campaign Operations",
+    "Lifecycle Marketing",
+    "Email Marketing",
+    "Lead Nurturing",
+    "B2B Marketing",
+    "Pipeline Generation",
+    "Funnel Optimization",
+    "A/B Testing",
+    "Marketing Automation"
+  ];
+
+  const resumeTools = [
+    "HubSpot",
+    "Google Analytics",
+    "SEMrush",
+    "Trello",
+    "Jira",
+    "Asana",
+    "Canva",
+    "GitHub",
+    "HTML/CSS (Email & Landing Pages)"
   ];
 
   return (
@@ -71,10 +111,10 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl"
         >
-          <div className="flex items-center justify-between gap-4 mb-8">
+          <div className="flex items-center justify-between gap-4 mb-6">
             <div>
-              <p className="font-headline text-on-surface font-bold text-lg md:text-xl">Katie Vu</p>
-              <p className="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Marketing Program Manager</p>
+              <p className="font-headline text-on-surface font-bold text-lg md:text-2xl">Katie Vu</p>
+              <p className="text-xs md:text-sm text-on-surface-variant uppercase tracking-widest font-bold">Marketing Program Manager</p>
             </div>
             <div className="w-16 h-16 md:w-24 md:h-24 rounded-xl overflow-hidden border-2 border-white shadow-md shrink-0 lg:hidden">
               <img 
@@ -85,11 +125,25 @@ export default function About() {
               />
             </div>
           </div>
-          <h1 className="font-headline text-2xl sm:text-4xl md:text-5xl font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8">
+
+          {/* Quick contact chips */}
+          <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-8 text-xs md:text-sm text-on-surface-variant">
+            <span className="flex items-center gap-1.5 font-medium">
+              <MapPin className="w-4 h-4 text-primary shrink-0" />
+              San Jose, CA
+            </span>
+            <span className="text-outline-variant/40">•</span>
+            <a href="mailto:katielvu@gmail.com" className="flex items-center gap-1.5 font-medium hover:text-on-surface transition-colors">
+              <Mail className="w-4 h-4 text-primary shrink-0" />
+              katielvu@gmail.com
+            </a>
+          </div>
+
+          <h1 className="font-headline text-2xl sm:text-4xl md:text-5xl font-extrabold text-on-surface leading-[1.15] tracking-tighter mb-8">
             Bridging the gap between <span className="text-primary italic">Market Strategy</span> and <span className="text-primary italic">Operational Rigor</span>.
           </h1>
-          <p className="font-body text-lg md:text-2xl leading-relaxed text-on-surface-variant">
-            I am Katie Vu, a Marketing Program Manager dedicated to architectural precision in GTM execution. I treat every campaign as a structural document—designed for performance, built for scale, and optimized through data.
+          <p className="font-body text-lg md:text-xl leading-relaxed text-on-surface-variant">
+            I am Katie Vu, a Marketing Program Manager with 5+ years of experience driving demand generation, lifecycle marketing, and marketing operations. I architect automated nurture programs, launch high-impact growth experiments, and turn complex data into measurable pipeline growth.
           </p>
         </motion.div>
       </section>
@@ -97,50 +151,54 @@ export default function About() {
       {/* Bio & Image Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-32 md:mb-40">
         <div className="lg:col-span-5 relative group hidden lg:block">
-          <div className="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-lg">
+          <div className="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-2xl shadow-lg">
             <img 
               alt="Katie Vu professional portrait" 
-              className="w-full h-full object-cover opacity-90 transition-all duration-500 group-hover:grayscale-0 object-center" 
+              className="w-full h-full object-cover opacity-95 transition-all duration-500 group-hover:scale-[1.02] object-center" 
               src="./headshot.jpg"
               referrerPolicy="no-referrer"
             />
           </div>
-          <div className="absolute -bottom-6 -right-6 bg-surface-container-lowest p-8 rounded-lg shadow-sm max-w-[240px]">
-            <span className="font-headline text-primary text-4xl font-bold block mb-1">05+</span>
-            <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant font-bold">Years of Strategic Execution</span>
+          <div className="absolute -bottom-6 -right-6 bg-surface-container-lowest p-6 rounded-xl shadow-md border border-outline-variant/10 max-w-[240px]">
+            <span className="font-headline text-primary text-4xl font-extrabold block mb-1">5+</span>
+            <span className="font-label text-xs uppercase tracking-[0.18em] text-on-surface-variant font-bold">Years of Marketing & Operations</span>
           </div>
         </div>
 
         <div className="lg:col-span-7">
-          <div className="space-y-8">
-            <div className="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full font-label text-xs md:text-sm font-bold uppercase tracking-widest">The Approach</div>
-            <h2 className="font-headline text-xl md:text-3xl font-bold text-on-surface tracking-tight">An Analytical and Thoughtful Lens</h2>
-            <div className="font-body text-base md:text-lg leading-relaxed text-on-surface-variant space-y-6">
+          <div className="space-y-6">
+            <div className="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full font-label text-xs md:text-sm font-bold uppercase tracking-widest">
+              The Approach
+            </div>
+            <h2 className="font-headline text-xl md:text-3xl font-bold text-on-surface tracking-tight">
+              Lifecycle Precision, Repeatable Growth, and Data Integrity
+            </h2>
+            <div className="font-body text-base md:text-lg leading-relaxed text-on-surface-variant space-y-5">
               <p>
-                My professional journey is defined by a commitment to clarity. In an industry often clouded by vanity metrics, I focus on the structural integrity of marketing operations. 
+                Throughout my career at <span className="text-on-surface font-semibold">Truvantis</span>, I spearheaded multi-channel demand generation campaigns and built 20+ automated funnels that increased qualified inbound leads by 14% YoY and influenced over $1.2M+ in pipeline.
               </p>
               <p>
-                At <span className="text-on-surface font-semibold">Truvantis</span>, I've honed the ability to translate complex business objectives into actionable program roadmaps. I believe that a successful Go-To-Market strategy isn't just about the launch; it's about the systems that sustain it.
+                My approach anchors on full-funnel lifecycle marketing—guiding enterprise buyer personas from first touch through nurture and conversion with targeted messaging, behavioral scoring, and continuous A/B experimentation.
               </p>
               <p>
-                I approach MarTech not as a collection of tools, but as an ecosystem. My goal is to eliminate friction between content creation and market delivery, ensuring every piece of collateral serves a measurable purpose in the customer journey.
+                Whether partnering cross-functionally with Sales and Customer Success, troubleshooting email templates in HTML/CSS, or building KPI dashboards in HubSpot and Google Analytics, I focus on building sustainable operational systems that deliver clear business outcomes.
               </p>
             </div>
           </div>
           
           {/* Mobile Experience Card */}
-          <div className="mt-12 lg:hidden bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10">
-            <span className="font-headline text-primary text-5xl font-bold block mb-2">05+</span>
-            <span className="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant font-bold">Years of Strategic Execution</span>
+          <div className="mt-8 lg:hidden bg-surface-container-low p-6 rounded-2xl border border-outline-variant/10">
+            <span className="font-headline text-primary text-4xl font-bold block mb-1">5+</span>
+            <span className="font-label text-xs uppercase tracking-[0.18em] text-on-surface-variant font-bold">Years of Strategic Execution</span>
           </div>
         </div>
       </section>
 
       {/* Core Competencies Carousel */}
-      <section className="mb-40">
-        <div className="flex items-end justify-between mb-16">
+      <section className="mb-32 md:mb-40">
+        <div className="flex items-end justify-between mb-12">
           <div>
-            <h3 className="font-headline text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">Core Competencies</h3>
+            <h3 className="font-headline text-sm font-bold uppercase tracking-[0.3em] text-primary mb-3">Core Competencies</h3>
             <div className="h-0.5 w-12 bg-primary/20"></div>
           </div>
           <div className="flex gap-2">
@@ -178,7 +236,7 @@ export default function About() {
         </div>
 
         {/* Carousel Progress Dots */}
-        <div className="flex justify-center gap-2 mt-10">
+        <div className="flex justify-center gap-2 mt-8">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
@@ -192,72 +250,252 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience */}
-      <section className="max-w-4xl">
-        <div className="mb-16">
-          <h3 className="font-headline text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">Selected Experience</h3>
-          <div className="h-0.5 w-12 bg-primary/20"></div>
+      {/* Experience Section */}
+      <section className="mb-32">
+        <div className="mb-14">
+          <div className="flex items-center gap-3 mb-3">
+            <Briefcase className="w-5 h-5 text-primary" />
+            <h3 className="font-headline text-sm font-bold uppercase tracking-[0.3em] text-primary">Professional Experience</h3>
+          </div>
+          <div className="h-0.5 w-12 bg-primary/20 mb-4"></div>
+          <p className="text-on-surface-variant text-base">
+            Proven track record driving multi-channel demand generation, lifecycle programs, and marketing operations.
+          </p>
         </div>
+
         <div className="space-y-16">
-          <ExperienceItem 
-            period="MAR 2020 — JUL 2025"
-            title="Marketing Program Manager"
-            company="Truvantis, Inc | San Jose, CA"
-            points={[
-              "Pipeline Generation: Scaled and executed multi-channel growth campaigns across email, webinars, and landing pages, resulting in a 14% YoY increase in qualified inbound leads and over $1.2M in influenced pipeline.",
-              "Lifecycle Automation: Architected and optimized 20+ automated HubSpot workflows using high-intent behavioral triggers and advanced segmentation to nurture prospects and accelerate the customer journey.",
-              "Campaign Orchestration: Executed 200+ email campaigns and 20+ automated marketing funnels, consistently improving open and conversion rates through rigorous A/B testing and data-driven experimentation.",
-              "ABM & Strategic Alignment: Collaborated cross-functionally with Sales, Customer Success, and Professional Services to develop targeted ABM strategies that aligned global campaigns with regional GTM priorities.",
-              "Technical Content Strategy: Partnered with external writers and design teams to translate complex technical concepts into high-converting assets specifically tailored for developer and enterprise architect personas.",
-              "Full-Funnel Analytics: Owned comprehensive reporting using HubSpot and Google Analytics; translated raw performance data into actionable insights to optimize campaign ROI and lead-to-opportunity conversion rates.",
-              "Growth Operations: Managed lead routing and sales handoff protocols to ensure seamless transition from marketing engagement to sales discovery, reducing friction in the B2B buying journey.",
-              "Search & Web Optimization: Leveraged SEMrush to optimize SEO performance and website operations, resolving technical issues and collaborating with developers to increase organic visibility and site health.",
-              "Email Compliance & QA: Maintained CAN-SPAM and GDPR compliance standards across all email deployments, ensuring data accuracy, consent management, and suppression list hygiene throughout all campaign operations."
-            ]}
-            tags={["HubSpot Expert", "GTM Strategy", "Analytics & ROI"]}
-          />
-        </div>
-      </section>
-
-      {/* Technical Proficiency */}
-      <section className="mt-24 pt-20 border-t border-outline-variant/10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-          <div>
-            <h3 className="font-headline text-lg font-bold text-on-surface mb-2">Technical Proficiency</h3>
-            <p className="font-body text-sm text-on-surface-variant">The tools that enable the architectural ledger.</p>
-          </div>
-          <div className="flex flex-wrap gap-3 max-w-xl">
-            {[
-              "HubSpot", "Google Analytics", "SEMrush", "Jira", "Asana", "Canva", "GitHub", 
-              "HTML/CSS (Email Editing)", "Customer.io", "Inflection.io", "Google AI Studio", 
-              "Marketing Automation", "Budget Optimization", "Stakeholder Mgmt"
-            ].map((tool) => (
-              <span key={tool} className="px-4 py-2 bg-primary-container text-on-primary-container rounded-full font-label text-xs font-semibold">
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="mt-12 pt-12 border-t border-outline-variant/10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-          <div>
-            <h3 className="font-headline text-lg font-bold text-on-surface mb-2">Certifications</h3>
-            <p className="font-body text-sm text-on-surface-variant">Validated proofs of specialized expertise.</p>
-          </div>
-          <div className="flex flex-wrap gap-4 max-w-xl">
-            {[
-              "HubSpot Inbound Marketing", 
-              "HubSpot Sales Enablement"
-            ].map((cert) => (
-              <div key={cert} className="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-lg font-label text-xs font-semibold text-on-surface">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                {cert}
+          {/* Truvantis Inc Container */}
+          <div className="bg-surface-container-lowest p-6 md:p-10 rounded-2xl border border-outline-variant/10 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-outline-variant/10 pb-6 mb-8">
+              <div>
+                <h4 className="font-headline text-xl md:text-2xl font-bold text-on-surface">Truvantis, Inc</h4>
+                <div className="font-body text-sm text-primary font-medium flex items-center gap-1.5 mt-1">
+                  <MapPin className="w-3.5 h-3.5" />
+                  San Jose, CA
+                </div>
               </div>
-            ))}
+              <span className="font-label text-xs uppercase tracking-widest px-3 py-1 bg-primary-container text-on-primary-container rounded-full font-semibold w-fit">
+                Mar 2020 – Jul 2025
+              </span>
+            </div>
+
+            <div className="space-y-12">
+              {/* Role 1: Marketing Program Manager */}
+              <div className="relative pl-6 border-l-2 border-primary/30">
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-container-lowest" />
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <h5 className="font-headline text-lg md:text-xl font-bold text-on-surface">
+                    Marketing Program Manager
+                  </h5>
+                  <span className="font-label text-xs font-semibold text-outline uppercase tracking-wider">
+                    Feb 2021 – Jul 2025
+                  </span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {[
+                    "Developed personalized nurture programs and dynamic content tailored to enterprise buyer personas, improving relevance and conversion across lifecycle stages",
+                    "Drove 14% YoY growth in qualified inbound leads and influenced $1.2M+ in pipeline through multi-channel campaigns (email, webinars, landing pages)",
+                    "Owned end-to-end lifecycle marketing (acquisition → nurture → conversion), improving lead-to-opportunity conversion through behavioral segmentation and lead scoring",
+                    "Launched 20+ growth experiments using HubSpot automation and AI tools (messaging, timing, audience), increasing engagement and conversion rates across Enterprise segments",
+                    "Partnered with Sales, ProServ, and Customer Success to align GTM campaigns with service launches, regional priorities, and revenue targets",
+                    "Built and maintained lifecycle KPI dashboards (HubSpot + Google Analytics), partnering with cross-functional teams to surface actionable insights, reduce funnel drop-offs, and improve pipeline velocity"
+                  ].map((bullet, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm md:text-base">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["Demand Generation", "HubSpot Automation", "Lifecycle KPI Dashboards", "$1.2M+ Influenced Pipeline", "Cross-Functional GTM"].map((tag) => (
+                    <span key={tag} className="px-2.5 py-1 bg-surface-container-high text-on-surface-variant rounded-md font-label text-[11px] font-semibold">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Role 2: Marketing Specialist */}
+              <div className="relative pl-6 border-l-2 border-outline-variant/30">
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-surface-container-lowest" />
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <h5 className="font-headline text-lg md:text-xl font-bold text-on-surface">
+                    Marketing Specialist
+                  </h5>
+                  <span className="font-label text-xs font-semibold text-outline uppercase tracking-wider">
+                    Mar 2020 – Feb 2021
+                  </span>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {[
+                    "Scaled operational execution to support 200+ email deployments and 20+ automated funnels, maintaining data accuracy, QA standards, and CAN-SPAM and GDPR compliance across all campaigns",
+                    "Applied working knowledge of HTML/CSS to customize, test, and troubleshoot email templates and landing pages directly in HubSpot",
+                    "Supported the end-to-end execution of multi-channel demand generation campaigns, managing list segmentation, A/B testing, and campaign scheduling",
+                    "Collaborated with marketing leadership to monitor campaign performance metrics, providing foundational reporting and insights to optimize weekly email and nurture workflows"
+                  ].map((bullet, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-on-surface-variant leading-relaxed text-sm md:text-base">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["200+ Email Deployments", "HTML/CSS Troubleshooting", "CAN-SPAM & GDPR QA", "A/B Testing"].map((tag) => (
+                    <span key={tag} className="px-2.5 py-1 bg-surface-container-high text-on-surface-variant rounded-md font-label text-[11px] font-semibold">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Skills & Tools Section */}
+      <section className="mb-32 pt-16 border-t border-outline-variant/10">
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-3">
+            <Wrench className="w-5 h-5 text-primary" />
+            <h3 className="font-headline text-sm font-bold uppercase tracking-[0.3em] text-primary">Skills & Tools Stack</h3>
+          </div>
+          <div className="h-0.5 w-12 bg-primary/20 mb-4"></div>
+          <p className="text-on-surface-variant text-base">
+            Comprehensive skill set and platform expertise matching my resume.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Core Skills */}
+          <div className="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <CheckCircle2 className="w-5 h-5 text-primary" />
+                <h4 className="font-headline text-lg font-bold text-on-surface">Core Marketing Skills</h4>
+              </div>
+              <p className="text-sm text-on-surface-variant mb-6">
+                Strategic and execution competencies honed over 5+ years of B2B and demand generation leadership.
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {resumeSkills.map((skill) => (
+                  <span 
+                    key={skill} 
+                    className="px-3.5 py-2 bg-primary-container text-on-primary-container rounded-lg font-label text-xs md:text-sm font-semibold"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Tools & Platforms */}
+          <div className="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Wrench className="w-5 h-5 text-primary" />
+                <h4 className="font-headline text-lg font-bold text-on-surface">Tools & Technologies</h4>
+              </div>
+              <p className="text-sm text-on-surface-variant mb-6">
+                Platforms and technologies leveraged daily for automation, data analytics, QA, and project management.
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {resumeTools.map((tool) => (
+                  <span 
+                    key={tool} 
+                    className="px-3.5 py-2 bg-surface-container-high text-on-surface rounded-lg font-label text-xs md:text-sm font-semibold border border-outline-variant/15"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education & Certifications */}
+      <section className="mb-20 pt-16 border-t border-outline-variant/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Education */}
+          <div className="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/10 shadow-sm">
+            <div className="flex items-center gap-2.5 mb-4">
+              <GraduationCap className="w-6 h-6 text-primary" />
+              <h3 className="font-headline text-lg md:text-xl font-bold text-on-surface">Education</h3>
+            </div>
+            <div className="border-l-2 border-primary/30 pl-4 py-1 mt-4">
+              <h4 className="font-headline text-base md:text-lg font-bold text-on-surface">
+                San José State University
+              </h4>
+              <p className="text-sm text-primary font-medium mt-1">
+                B.S. Business Administration, In Progress
+              </p>
+              <p className="text-xs text-outline mt-2 font-medium uppercase tracking-wider">
+                Expected Dec 2026
+              </p>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/10 shadow-sm">
+            <div className="flex items-center gap-2.5 mb-4">
+              <Award className="w-6 h-6 text-primary" />
+              <h3 className="font-headline text-lg md:text-xl font-bold text-on-surface">Certifications</h3>
+            </div>
+            <p className="text-sm text-on-surface-variant mb-4">
+              Industry credentials validating inbound and sales enablement proficiency.
+            </p>
+            <div className="space-y-3">
+              {[
+                { name: "HubSpot Inbound Marketing", issuer: "HubSpot Academy" },
+                { name: "HubSpot Sales Enablement", issuer: "HubSpot Academy" }
+              ].map((cert) => (
+                <div key={cert.name} className="flex items-center justify-between p-3.5 bg-surface-container-low rounded-xl border border-outline-variant/10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <div>
+                      <span className="font-headline text-sm font-bold text-on-surface block">
+                        {cert.name}
+                      </span>
+                      <span className="text-xs text-on-surface-variant font-medium">
+                        {cert.issuer}
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-[11px] font-semibold text-primary px-2.5 py-1 bg-primary-container rounded-md">
+                    Verified
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get in Touch CTA */}
+      <section className="mt-12 bg-surface-container-low p-8 md:p-12 rounded-2xl border border-outline-variant/10 text-center">
+        <h3 className="font-headline text-xl md:text-2xl font-bold text-on-surface mb-3">
+          Let&apos;s Connect
+        </h3>
+        <p className="text-on-surface-variant max-w-lg mx-auto mb-8 text-sm md:text-base">
+          Open to senior marketing program management opportunities, lifecycle growth initiatives, and consulting engagements.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <a 
+            href="mailto:katielvu@gmail.com" 
+            className="px-6 py-3 bg-primary text-on-primary rounded-xl font-bold hover:bg-primary-dim transition-colors text-sm flex items-center gap-2"
+          >
+            <Mail className="w-4 h-4" />
+            katielvu@gmail.com
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/katie-vu-b25477133/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-surface-container-lowest text-on-surface border border-outline-variant/20 rounded-xl font-bold hover:bg-surface-container-high transition-colors text-sm flex items-center gap-2"
+          >
+            LinkedIn Profile
+          </a>
         </div>
       </section>
     </main>
@@ -266,9 +504,9 @@ export default function About() {
 
 function CompetencyCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
   return (
-    <div className="bg-surface-container-lowest p-6 md:p-10 rounded-xl transition-all duration-300 hover:bg-surface-dim/20 h-full flex flex-col">
-      <div className="text-primary mb-6">{icon}</div>
-      <h4 className="font-headline text-lg font-bold text-on-surface mb-4">{title}</h4>
+    <div className="bg-surface-container-lowest p-6 md:p-8 rounded-xl transition-all duration-300 hover:bg-surface-dim/20 h-full flex flex-col border border-outline-variant/10 shadow-sm">
+      <div className="text-primary mb-5">{icon}</div>
+      <h4 className="font-headline text-lg font-bold text-on-surface mb-3">{title}</h4>
       <p className="font-body text-sm leading-relaxed text-on-surface-variant flex-grow">
         {description}
       </p>
@@ -276,43 +514,3 @@ function CompetencyCard({ icon, title, description }: { icon: React.ReactNode, t
   );
 }
 
-function ExperienceItem({ period, title, company, description, secondaryDescription, tags, points }: { period: string, title: string, company: string, description?: string, secondaryDescription?: string, tags?: string[], points?: string[] }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-baseline">
-      <div className="font-label text-xs uppercase tracking-widest text-outline">{period}</div>
-      <div className="md:col-span-3">
-        <h4 className="font-headline text-lg md:text-2xl font-bold text-on-surface tracking-tight">{title}</h4>
-        <div className="font-body text-sm text-primary font-medium mb-4">{company}</div>
-        {description && (
-          <p className="font-body text-on-surface-variant leading-relaxed mb-4">
-            {description}
-          </p>
-        )}
-        {points && (
-          <ul className="space-y-3 mb-6">
-            {points.map((point, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-on-surface-variant leading-relaxed">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span>
-                <span className="text-sm md:text-base">{point}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-        {secondaryDescription && (
-          <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-            {secondaryDescription}
-          </p>
-        )}
-        {tags && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span key={tag} className="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded font-label text-[10px] font-semibold uppercase tracking-tighter">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}

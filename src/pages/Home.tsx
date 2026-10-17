@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { TrendingUp, Wallet, Layers, Check, ArrowDown } from "lucide-react";
+import { TrendingUp, Wallet, Layers, Check, ArrowDown, Mail, MapPin, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
 
@@ -11,6 +11,31 @@ export default function Home() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const resumeSkills = [
+    "Demand Generation",
+    "Campaign Operations",
+    "Lifecycle Marketing",
+    "Email Marketing",
+    "Lead Nurturing",
+    "B2B Marketing",
+    "Pipeline Generation",
+    "Funnel Optimization",
+    "A/B Testing",
+    "Marketing Automation"
+  ];
+
+  const resumeTools = [
+    "HubSpot",
+    "Google Analytics",
+    "SEMrush",
+    "Trello",
+    "Jira",
+    "Asana",
+    "Canva",
+    "GitHub",
+    "HTML/CSS"
+  ];
 
   return (
     <main className="pt-20">
@@ -25,7 +50,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-7"
             >
-              <div className="flex items-center justify-between gap-4 mb-8">
+              <div className="flex items-center justify-between gap-4 mb-6">
                 <div>
                   <p className="font-headline text-on-surface font-bold text-lg md:text-xl">Katie Vu</p>
                   <p className="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Marketing Program Manager</p>
@@ -40,11 +65,24 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Quick contact chips */}
+              <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6 text-xs md:text-sm text-on-surface-variant">
+                <span className="flex items-center gap-1.5 font-medium">
+                  <MapPin className="w-4 h-4 text-primary shrink-0" />
+                  San Jose, CA
+                </span>
+                <span className="text-outline-variant/40">•</span>
+                <a href="mailto:katielvu@gmail.com" className="flex items-center gap-1.5 font-medium hover:text-on-surface transition-colors">
+                  <Mail className="w-4 h-4 text-primary shrink-0" />
+                  katielvu@gmail.com
+                </a>
+              </div>
+
               <h1 className="font-headline text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-on-surface font-extrabold tracking-tighter mb-8 md:mb-10">
                 Driving <span className="text-primary italic">Measurable</span> Growth Through Strategic Program Management.
               </h1>
               <p className="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10 md:mb-12">
-                5+ years of architecting scalable campaign frameworks that turn complex data into high-impact brand growth. Specializing in the end-to-end management of digital ecosystems, from technical SEO to multimedia content operations.
+                5+ years driving demand generation, lifecycle marketing, and marketing operations. Proven track record architecting enterprise nurture workflows, launching 20+ growth experiments, and influencing $1.2M+ in pipeline.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button 
@@ -54,6 +92,12 @@ export default function Home() {
                   Explore the Strategy
                   <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                 </button>
+                <Link
+                  to="/about"
+                  className="bg-surface-container-high text-on-surface px-8 py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-surface-dim transition-all flex items-center gap-2"
+                >
+                  View Full Experience
+                </Link>
               </div>
             </motion.div>
 
@@ -90,19 +134,19 @@ export default function Home() {
               icon={<TrendingUp className="text-primary w-10 h-10" />}
               label="Growth Performance"
               value="14%"
-              description="YoY increase in qualified inbound leads through optimized multi-channel target audience campaigns."
+              description="YoY growth in qualified inbound leads achieved through multi-channel demand campaigns (email, webinars, landing pages)."
             />
             <MetricCard 
               icon={<Wallet className="text-primary w-10 h-10" />}
               label="Influenced Pipeline"
               value="$1.2M+"
-              description="Directly influenced revenue pipeline through strategic campaign execution and lead nurturing."
+              description="Directly influenced revenue pipeline through targeted enterprise nurture programs and lifecycle marketing."
             />
             <MetricCard 
               icon={<Layers className="text-primary w-10 h-10" />}
-              label="Scale Capability"
+              label="Scale & Execution"
               value="200+"
-              description="Email campaigns and automated marketing funnels executed and optimized within HubSpot."
+              description="Email deployments and 20+ automated funnels executed with strict QA, CAN-SPAM, and GDPR compliance."
             />
           </div>
         </div>
@@ -115,28 +159,28 @@ export default function Home() {
             <div className="col-span-12 md:col-span-5 mb-12 md:mb-0">
               <h2 className="font-headline text-xl md:text-3xl font-extrabold text-on-surface mb-6 tracking-tight">Strategic Execution.</h2>
               <p className="font-body text-on-surface-variant text-lg leading-relaxed mb-8">
-                A versatile execution strategy designed to navigate complex digital ecosystems, seamlessly pivoting between technical operations, creative production, and strategic growth initiatives.
+                A structured execution methodology designed to navigate enterprise B2B ecosystems—uniting demand generation, marketing operations, cross-functional GTM alignment, and continuous experimentation.
               </p>
               <ul className="space-y-6">
                 <ExecutionItem 
-                  title="Digital Ecosystem & Web Strategy"
-                  description="Led comprehensive Website Life-cycle Management, including full-scale UI/UX redesigns, structural audits, and SEO-driven content refreshes."
+                  title="Demand & Pipeline Generation"
+                  description="Scaling multi-channel campaigns across email, webinars, and landing pages to drive consistent inbound lead growth and influenced pipeline."
                 />
                 <ExecutionItem 
-                  title="Multi-Channel Content Operations"
-                  description="Orchestrated End-to-End Multimedia Programming, managing the production and launch of high-engagement video series, podcasts, and webinars."
+                  title="Lifecycle Marketing & Automation"
+                  description="Architecting automated HubSpot workflows with behavioral segmentation, lead scoring, and 20+ growth experiments across Enterprise buyer stages."
                 />
                 <ExecutionItem 
-                  title="Lifecycle & Growth Marketing"
-                  description="Developed and executed Performance Marketing Funnels and automated email lifecycle sequences to maximize lead acquisition."
+                  title="Campaign Operations & QA Compliance"
+                  description="Scaling delivery across 200+ email deployments, HTML/CSS troubleshooting, and strict CAN-SPAM / GDPR suppression list governance."
                 />
                 <ExecutionItem 
-                  title="Brand Enablement & Internal Ops"
-                  description="Standardized Cross-Functional Brand Assets, developing institutional templates (SOWs, Pitch Decks, Reports) and high-conversion case studies to streamline sales and internal workflows."
+                  title="Cross-Functional GTM Alignment"
+                  description="Collaborating with Sales, ProServ, and Customer Success to align regional campaigns with product launches and revenue targets."
                 />
                 <ExecutionItem 
-                  title="Experiential & Event Marketing"
-                  description="Directed Event Operations and Logistics for large-scale industry conferences and trade shows, overseeing vendor management and on-site brand activation."
+                  title="Full-Funnel Analytics & Reporting"
+                  description="Building lifecycle KPI dashboards in HubSpot and Google Analytics to uncover actionable insights, eliminate funnel friction, and boost velocity."
                 />
               </ul>
             </div>
@@ -174,40 +218,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills & Tools Section */}
       <section className="py-24 bg-surface-container-lowest">
         <div className="max-w-5xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-lg md:text-2xl font-extrabold text-on-surface mb-4 tracking-tight">The Stack & Expertise</h2>
-            <p className="text-on-surface-variant">A technical approach to marketing operations.</p>
+            <h2 className="font-headline text-lg md:text-2xl font-extrabold text-on-surface mb-3 tracking-tight">The Stack & Expertise</h2>
+            <p className="text-on-surface-variant max-w-lg mx-auto">
+              Strategic competencies and software platforms leveraged to drive pipeline velocity.
+            </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "HubSpot", "Google Analytics", "SEMrush", "Jira", "Asana", "Canva", "GitHub", 
-              "HTML/CSS (Email Editing)", "Customer.io", "Inflection.io", "Google AI Studio", 
-              "Marketing Automation", "Budget Optimization", "Stakeholder Mgmt"
-            ].map((skill) => (
-              <span key={skill} className="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label text-sm font-semibold">
-                {skill}
-              </span>
-            ))}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/10">
+              <h3 className="font-headline text-base font-bold text-on-surface uppercase tracking-wider mb-4">
+                Core Skills
+              </h3>
+              <div className="flex flex-wrap gap-2.5">
+                {resumeSkills.map((skill) => (
+                  <span 
+                    key={skill} 
+                    className="px-3.5 py-1.5 bg-primary-container text-on-primary-container rounded-lg font-label text-xs md:text-sm font-semibold"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/10">
+              <h3 className="font-headline text-base font-bold text-on-surface uppercase tracking-wider mb-4">
+                Tools & Platforms
+              </h3>
+              <div className="flex flex-wrap gap-2.5">
+                {resumeTools.map((tool) => (
+                  <span 
+                    key={tool} 
+                    className="px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-label text-xs md:text-sm font-semibold border border-outline-variant/20"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="pt-32 pb-12">
-        <div className="max-w-4xl mx-auto px-8 text-center bg-surface-container-low py-20 rounded-2xl">
-          <h2 className="font-headline text-xl md:text-3xl font-extrabold text-on-surface mb-6 tracking-tight">Ready to Scale?</h2>
-          <p className="font-body text-on-surface-variant text-lg mb-10 max-w-xl mx-auto">
-            Currently accepting inquiries for senior marketing program management roles and high-impact strategic consulting.
+      <section className="pt-20 pb-16">
+        <div className="max-w-4xl mx-auto px-8 text-center bg-surface-container-low py-16 md:py-20 rounded-2xl border border-outline-variant/10">
+          <h2 className="font-headline text-xl md:text-3xl font-extrabold text-on-surface mb-4 tracking-tight">Ready to Drive Scalable Growth?</h2>
+          <p className="font-body text-on-surface-variant text-base md:text-lg mb-8 max-w-xl mx-auto">
+            Available for marketing program management, lifecycle automation, and high-impact GTM execution roles.
           </p>
-          <div className="flex justify-center">
+          
+          <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="mailto:katielvu@gmail.com"
-              className="bg-primary text-on-primary px-12 py-4 rounded-lg font-bold hover:bg-primary-dim transition-colors inline-block"
+              className="bg-primary text-on-primary px-8 py-3.5 rounded-xl font-bold hover:bg-primary-dim transition-colors inline-flex items-center gap-2"
             >
-              Connect
+              <Mail className="w-4 h-4" />
+              katielvu@gmail.com
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/katie-vu-b25477133/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-surface-container-lowest text-on-surface border border-outline-variant/20 px-8 py-3.5 rounded-xl font-bold hover:bg-surface-container-high transition-colors inline-flex items-center gap-2"
+            >
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
             </a>
           </div>
         </div>
@@ -244,3 +324,4 @@ function ExecutionItem({ title, description }: { title: string, description: str
     </li>
   );
 }
+
